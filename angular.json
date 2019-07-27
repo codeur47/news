@@ -23,9 +23,15 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/custom.css",
+              "node_modules/semantic-ui-css/semantic.min.css",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/semantic-ui-css/semantic.min.js",
+              "src/assets/js/custom.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
