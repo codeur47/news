@@ -3,43 +3,43 @@
   <p>Quand vous informez devient notre passion </p>
 </div>
 
-
 <div class="ui borderless main menu">
   <div class="ui text container">
     <div class="header item">
       <img class="logo" src="assets/images/logo.png">
          NEW APP
     </div>
-    <a href="#" class="item">Accueil</a>
-    <a href="#" class="item">Categorie</a>
   </div>
 </div>
 
-<div class="ui grid container-fluid" style="margin: 100px; margin-left: 180px;">
-  <div class="ui link cards">
-    <div class="black card" *ngFor="let article of articles?.articles">
-      <div class="image">
-        <img src="{{article.urlToImage}}" style="height: 220px;">
-      </div>
-      <div class="content">
-        <div class="header">{{article.title}}</div>
-        <div class="meta">
-          <a>{{article.author}}</a>
+<div class="ui horizontally divided grid container-fluid" style="margin: 150px;">
+  <div class="one column">
+      <div class="ui link cards">
+        <div class="black card" *ngFor="let article of articles?.articles" style="margin: 10px;">
+
+          <div class="image">
+            <img src="{{article.urlToImage}}" style="height: 220px;">
+          </div>
+          <div class="content">
+            <div class="header">{{article.title}}</div>
+            <div class="meta">
+              <a class="ui tag label">{{article.author}}</a>
+            </div>
+            <div class="description">
+              {{article.description}}
+            </div>
+          </div>
+          <div class="extra content">
+            <span class="right floated">
+              {{article.publishedAt | dateAgo}}
+            </span>
+            <span>
+              <a class="ui blue ribbon label">En savoir +</a>
+            </span>
+          </div>
         </div>
-        <div class="description">
-          {{article.description}}
-        </div>
       </div>
-      <div class="extra content">
-      <span class="right floated">
-        {{article.publishedAt | dateAgo}}
-      </span>
-        <span>
-        <button class="ui inverted secondary button">En savoir +</button>
-      </span>
-      </div>
-    </div>
-</div>
+  </div>
 </div>
 <div class="ui inverted vertical footer segment">
   <div class="ui center aligned container">
