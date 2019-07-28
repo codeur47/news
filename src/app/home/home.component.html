@@ -6,17 +6,33 @@
 <div class="ui borderless main menu">
   <div class="ui text container">
     <div class="header item">
-      <img class="logo" src="assets/images/logo.png">
+      <i class="newspaper outline icon"></i>
          NEW APP
     </div>
   </div>
+</div>
+
+<div class="ui container" style="margin: 50px;">
+  <form class="ui form">
+    <h4 class="ui dividing header">Zone de filtre</h4>
+    <div class="ui form">
+      <div class="field">
+        <label>Pays</label>
+        <select class="ui search dropdown">
+          <option value="">Sélectionner un pays</option>
+          <option value="ZW">Zimbabwe</option>
+        </select>
+      </div>
+    </div>
+
+  </form>
+
 </div>
 
 <div class="ui horizontally divided grid container-fluid" style="margin: 150px;">
   <div class="one column">
       <div class="ui link cards">
         <div class="black card" *ngFor="let article of articles?.articles" style="margin: 10px;">
-
           <div class="image">
             <img src="{{article.urlToImage}}" style="height: 220px;">
           </div>
@@ -35,7 +51,7 @@
             </span>
 
             <span>
-              <a class="ui blue ribbon label">En savoir +</a>
+              <a class="ui blue ribbon label" href="{{article.url}}" target="_blank">En savoir +</a>
             </span>
           </div>
         </div>
@@ -45,12 +61,10 @@
 <div class="ui inverted vertical footer segment">
   <div class="ui center aligned container">
     <div class="ui inverted section divider"></div>
-    <img src="assets/images/logo.png" class="ui centered mini image">
+    <i class="newspaper outline icon ui centered mini image"></i>
     <div class="ui horizontal center aligned inverted small divided link list">
-      <a class="item" href="#">Site Map</a>
-      <a class="item" href="#">Contact Us</a>
-      <a class="item" href="#">Terms and Conditions</a>
-      <a class="item" href="#">Privacy Policy</a>
+      <a class="item" href="#">News APP</a>
+      <a class="item" href="#">Contactez-Nous</a>
     </div>
   </div>
 </div>

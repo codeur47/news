@@ -14,7 +14,7 @@ export class ApiService {
   constructor(private http: HttpClient) {}
   getAllLatestArticle() {
     let globalArticleObservable: Observable<GlobalArticle>;
-    globalArticleObservable = this.http.get<GlobalArticle>(BASE_URL + 'top-headlines?country=us&apiKey=' + API_TOKEN);
+    globalArticleObservable = this.http.get<GlobalArticle>(BASE_URL + 'top-headlines?country=be&apiKey=' + API_TOKEN);
     return globalArticleObservable;
   }
 }
